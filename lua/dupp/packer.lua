@@ -66,7 +66,12 @@ return require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
-
   use "akinsho/toggleterm.nvim"
+  use 'norcalli/nvim-colorizer.lua'
+  use 'Shatur/neovim-session-manager'
+
+  use {
+      'numToStr/Comment.nvim',
+  }
 
 end)
