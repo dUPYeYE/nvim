@@ -37,5 +37,3 @@ vim.keymap.set("n", "<Tab>", ":BufferNext<CR>", { silent = true })
 vim.keymap.set("n", "<S-Tab>", ":BufferPrevious<CR>", { silent = true })
 vim.keymap.set("n", "<C-w>", ":BufferClose<CR>", { silent = true })
 
--- terminals
-vim.keymap.set("n", "<C-t>", ":ToggleTerm<CR>", { silent = true })
