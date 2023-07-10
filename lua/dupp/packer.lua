@@ -74,4 +74,10 @@ return require('packer').startup(function(use)
       'numToStr/Comment.nvim',
   }
 
+  use "folke/trouble.nvim"
+
+  use {
+    'kkharji/lspsaga.nvim',
+  }
+
 end)
