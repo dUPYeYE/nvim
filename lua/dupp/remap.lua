@@ -12,7 +12,25 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set("n", "<C-e>", vim.cmd.NvimTreeToggle)
+-- file explorer
+local api = require "nvim-tree.api"
+
+local function opts(desc)
+    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+end
+
+local Event = api.events.Event
+local function toggle_and_focus()
+    if Event.TreeOpen then
+        vim.cmd("NvimTreeFocus")
+    else
+        vim.cmd("NvimTreeToggle")
+        vim.cmd("NvimTreeFocus")
+    end
+end
+
+-- custom mappings
+vim.keymap.set("n", "<C-e>", toggle_and_focus, opts('Close'))
 
 -- buffer
 vim.keymap.set("n", "<Tab>", ":BufferNext<CR>", { silent = true })
