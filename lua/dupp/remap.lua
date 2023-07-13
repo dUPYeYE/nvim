@@ -61,3 +61,6 @@ vim.keymap.set("n", "<leader>l", vim.cmd.EslintFixAll, { desc = "ESLint fix all 
 
 -- Toggle markdown preview
 vim.keymap.set("n", "<leader>m", vim.cmd.MarkdownPreviewToggle, { desc = "Toggle markdown preview" })
+
+-- Toggle zenmode
+vim.keymap.set("n", "<leader>z", vim.cmd.ZenMode, { desc = "Toggle zen mode" })
