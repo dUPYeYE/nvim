@@ -68,7 +68,13 @@ return require("packer").startup(function(use)
   use "tpope/vim-fugitive"
 
   -- Topbar for open buffers
-  use "romgrk/barbar.nvim"
+  use {
+      "akinsho/bufferline.nvim",
+      tag = "*", requires = "nvim-tree/nvim-web-devicons",
+      config = function ()
+          require("bufferline").setup()
+      end
+  }
 
   -- Status line
   use {
@@ -114,22 +120,23 @@ return require("packer").startup(function(use)
       end
   }
 
-  -- Dashboard
-  use {
-      "glepnir/dashboard-nvim",
-      event = "VimEnter",
-      config = function()
-          require("dashboard").setup()
-      end,
-      requires = {"nvim-tree/nvim-web-devicons"}
-  }
-
   -- Markdown preview (inside a browser)
   use({
       "iamcco/markdown-preview.nvim",
       run = function() vim.fn["mkdp#util#install"]() end,
   })
-
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
+  -- Whitespaces
+  use {
+      "lukas-reineke/indent-blankline.nvim",
+      config = function ()
+          require("indent_blankline").setup {
+              -- for example, context is off by default, use this to turn it on
+              show_current_context = true,
+              show_current_context_start = true,
+          }
+      end
+  }
 
 end)
