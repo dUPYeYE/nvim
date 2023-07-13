@@ -22,22 +22,12 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- file explorer
-local api = require "nvim-tree.api"
-local Event = api.events.Event
-local function toggle_and_focus()
-    if Event.TreeOpen then
-        vim.cmd("NvimTreeFocus")
-    else
-        vim.cmd("NvimTreeToggle")
-        vim.cmd("NvimTreeFocus")
-    end
-end
-vim.keymap.set("n", "<C-e>", toggle_and_focus, { desc = "nvim-tree: Close", noremap = true, silent = true, nowait = true })
+vim.keymap.set("n", "<C-e>", vim.cmd.NeoTreeFocus, { desc = "nvim-tree: Close", noremap = true, silent = true, nowait = true })
 
 -- buffer
-vim.keymap.set("n", "<Tab>", ":BufferNext<CR>", { silent = true })
-vim.keymap.set("n", "<S-Tab>", ":BufferPrevious<CR>", { silent = true })
-vim.keymap.set("n", "<leader>w", ":BufferClose<CR>", { silent = true })
+vim.keymap.set("n", "<Tab>", vim.cmd.BufferNext, { silent = true })
+vim.keymap.set("n", "<S-Tab>", vim.cmd.BufferPrevious, { silent = true })
+vim.keymap.set("n", "<leader>w", vim.cmd.BufferClose, { silent = true })
 
 -- Open git
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Open git" });

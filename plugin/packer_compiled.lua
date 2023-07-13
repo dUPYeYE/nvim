@@ -84,11 +84,10 @@ _G.packer_plugins = {
     path = "/home/dupp/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["bufferline.nvim"] = {
-    config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15bufferline\frequire\0" },
+  ["barbar.nvim"] = {
     loaded = true,
-    path = "/home/dupp/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
-    url = "https://github.com/akinsho/bufferline.nvim"
+    path = "/home/dupp/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
   },
   catppuccin = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0!colorscheme catppuccin-mocha\bcmd\bvim\0" },
@@ -112,7 +111,7 @@ _G.packer_plugins = {
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["indent-blankline.nvim"] = {
-    config = { "\27LJ\2\nw\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\25show_current_context\2\31show_current_context_start\2\nsetup\21indent_blankline\frequire\0" },
+    config = { "\27LJ\2\nw\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\31show_current_context_start\2\25show_current_context\2\nsetup\21indent_blankline\frequire\0" },
     loaded = true,
     path = "/home/dupp/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
@@ -148,10 +147,20 @@ _G.packer_plugins = {
     path = "/home/dupp/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["neo-tree.nvim"] = {
+    loaded = true,
+    path = "/home/dupp/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
+    url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
+  },
   ["neovim-session-manager"] = {
     loaded = true,
     path = "/home/dupp/.local/share/nvim/site/pack/packer/start/neovim-session-manager",
     url = "https://github.com/Shatur/neovim-session-manager"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/dupp/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -244,10 +253,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: bufferline.nvim
-time([[Config for bufferline.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15bufferline\frequire\0", "config", "bufferline.nvim")
-time([[Config for bufferline.nvim]], false)
 -- Config for: nvim-colorizer.lua
 time([[Config for nvim-colorizer.lua]], true)
 try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
@@ -262,7 +267,7 @@ try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0!
 time([[Config for catppuccin]], false)
 -- Config for: indent-blankline.nvim
 time([[Config for indent-blankline.nvim]], true)
-try_loadstring("\27LJ\2\nw\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\25show_current_context\2\31show_current_context_start\2\nsetup\21indent_blankline\frequire\0", "config", "indent-blankline.nvim")
+try_loadstring("\27LJ\2\nw\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\31show_current_context_start\2\25show_current_context\2\nsetup\21indent_blankline\frequire\0", "config", "indent-blankline.nvim")
 time([[Config for indent-blankline.nvim]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
