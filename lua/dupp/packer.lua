@@ -142,15 +142,6 @@ use {
   end
 }
 
--- Minimap
-use {
-  "wfxr/minimap.vim",
-  config = function ()
-    vim.g.minimap_auto_start = 1
-    vim.g.minimap_auto_start_win_enter = 1
-    vim.g.minimap_width = 20
-    vim.g.minimap_highlight_range = 1
-  end
-}
+use "fedepujol/move.nvim"
 
 end)

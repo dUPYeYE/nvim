@@ -12,7 +12,13 @@ local function quit_nvim()
 end
 vim.keymap.set("n", "<leader>q", quit_nvim, { desc = "Exit NeoVim" })
 
--- Borrowed from ThePrimeagen
+-- Move line
+vim.keymap.set("n", "<M-Up>", ":MoveLine(-1)<CR>", { silent = true })
+vim.keymap.set("n", "<M-Down>", ":MoveLine(1)<CR>", { silent = true })
+vim.keymap.set("v", "<M-Up>", ":MoveBlock(-1)<CR>", { silent = true })
+vim.keymap.set("v", "<M-Down>", ":MoveBlock(1)<CR>", { silent = true })
+
+-- Move line(s) up and dow-- Borrowed from ThePrimeagen
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("x", "<leader>p", "\"_dP")
