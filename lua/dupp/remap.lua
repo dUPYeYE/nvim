@@ -7,8 +7,8 @@ vim.keymap.set("n", "<C-s>", vim.cmd.w)
 -- Close vim
 local nvimtree = require "nvim-tree.api"
 local function quit_nvim()
-    vim.cmd("q!")
-    nvimtree.tree.close()
+  vim.cmd("q!")
+  nvimtree.tree.close()
 end
 vim.keymap.set("n", "<leader>q", quit_nvim, { desc = "Exit NeoVim" })
 
@@ -43,9 +43,10 @@ vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Open undo tre
 
 -- Telescope(fuzzy finder) binds
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = "Find files in directory" })
-vim.keymap.set('n', '<leader>ff', builtin.git_files, { desc = "Find git files" })
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = "Find files in directory" })
+vim.keymap.set('n', '<leader>gf', builtin.git_files, { desc = "Find git files" })
 vim.keymap.set('n', '<C-f>', builtin.live_grep, { desc = "Search in project" })
+vim.keymap.set("n", "<leader>ch", builtin.colorscheme, { desc = "Change colorscheme" })
 vim.keymap.set('n', '<leader>ps',
   function()
       builtin.grep_string({ search = vim.fn.input("Grep > ") });
