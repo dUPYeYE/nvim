@@ -18,17 +18,22 @@ return require("packer").startup(function(use)
   use {
     "catppuccin/nvim",
     as = "catppuccin",
+  }
+
+  use {
+    "rose-pine/neovim",
+    as = "rose-pine",
     config = function()
-      vim.cmd("colorscheme catppuccin-mocha")
+      vim.cmd("colorscheme rose-pine-moon")
     end
   }
 
   -- Better syntax highlighting
-  use {
-    "nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"},
-    "nvim-treesitter/playground",
-    "nvim-treesitter/nvim-treesitter-context",
-  }
+  -- use {
+  --   "nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"},
+  --   "nvim-treesitter/playground",
+  --   "nvim-treesitter/nvim-treesitter-context",
+  -- }
 
   -- Store undos in memory
   use "mbbill/undotree"
@@ -53,6 +58,7 @@ return require("packer").startup(function(use)
     "L3MON4D3/LuaSnip",     -- Required
     "rafamadriz/friendly-snippets",
     "kkharji/lspsaga.nvim",
+    "onsails/lspkind.nvim",
   }
 }
 
@@ -167,26 +173,27 @@ use {
   end
 }
 
--- Markdown preview (inside a browser)
-use({
-  "iamcco/markdown-preview.nvim",
-  run = function() vim.fn["mkdp#util#install"]() end,
-})
-use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-
 -- Whitespaces
 use {
   "lukas-reineke/indent-blankline.nvim",
   config = function ()
-    require("indent_blankline").setup {
-      -- for example, context is off by default, use this to turn it on
-      show_current_context = true,
-      show_current_context_start = true,
-    }
+    require("ibl").setup()
   end
 }
 
 -- Move lines
 use "fedepujol/move.nvim"
 
+-- Code completion 
+use {
+    "Exafunction/codeium.nvim",
+    requires = {
+        "nvim-lua/plenary.nvim",
+        "hrsh7th/nvim-cmp",
+    },
+    config = function()
+        require("codeium").setup({
+        })
+    end
+}
 end)
