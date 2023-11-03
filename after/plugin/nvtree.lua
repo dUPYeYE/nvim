@@ -19,6 +19,10 @@ vim.fn.sign_define("DiagnosticSignHint",
 -- in the form "LspDiagnosticsSignWarning"
 
 require("neo-tree").setup({
+  source_selector = {
+    winbar = true,
+    statusline = false
+  },
   close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
   popup_border_style = "rounded",
   enable_git_status = true,
@@ -90,8 +94,7 @@ require("neo-tree").setup({
     -- see `:h neo-tree-global-custom-commands`
     commands = {},
     window = {
-      position = "left",
-      width = 28,
+      position = "current",
       mapping_options = {
         noremap = true,
         nowait = true,
@@ -157,7 +160,7 @@ require("neo-tree").setup({
             hide_gitignored = false,
             hide_hidden = true, -- only works on Windows for hidden files/directories
             hide_by_name = {
-              --"node_modules"
+              "node_modules"
             },
             hide_by_pattern = { -- uses glob style patterns
             --"*.meta",
