@@ -173,4 +173,22 @@ use {
 -- Move lines
 use "fedepujol/move.nvim"
 
+-- AI help 
+use("github/copilot.vim")
+use {
+  "zbirenbaum/copilot.lua",
+  cmd = "Copilot",
+  event = "InsertEnter",
+  config = function()
+    require("copilot").setup({})
+  end,
+}
+use {
+  "zbirenbaum/copilot-cmp",
+  after = { "copilot.lua" },
+  config = function ()
+    require("copilot_cmp").setup()
+  end
+}
+
 end)
