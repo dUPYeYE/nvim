@@ -103,10 +103,30 @@ use {
   event = "VimEnter",
   config = function()
     require("dashboard").setup {
-      theme = "hyper",
+      theme = 'hyper',
       config = {
+        header = {
+          " ",
+          " ",
+          " ",
+          "        ██                                                                             ",
+          "        ██                                                                             ",
+          "        ██                                                         ██                  ",
+          "        ██                                                                             ",
+          "  ████████  ██   ██  ████████  ████████      ████████  ██      ██  ██   ██████████████ ",
+          "  ██    ██  ██   ██  ██    ██  ██    ██      ██    ██   ██    ██   ██   ██    ██    ██ ",
+          "  ██    ██  ██   ██  ██    ██  ██    ██      ██    ██    ██  ██    ██   ██    ██    ██ ",
+          "  ██    ██  ██   ██  ██    ██  ██    ██      ██    ██     ████     ██   ██    ██    ██ ",
+          "  ████████  ███████  ████████  ████████  ██  ██    ██      ██      ██   ██    ██    ██ ",
+          "                     ██        ██                                                      ",
+          "                     ██        ██                                                      ",
+          "                     ██        ██                                                      ",
+          "                     ██        ██                                                      ",
+          " ",
+          " ",
+        },
         week_header = {
-          enable = true,
+          enable = false,
         },
         project = {
           enable = true,
@@ -166,7 +186,12 @@ use {
 use {
   "lukas-reineke/indent-blankline.nvim",
   config = function ()
-    require("ibl").setup()
+    require("ibl").setup {
+      exclude = {
+        filetypes = { "dashboard" },
+        buftypes = { "nofile" },
+      },
+    }
   end
 }
 
