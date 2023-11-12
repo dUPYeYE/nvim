@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/dupp/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?.lua;/home/dupp/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?/init.lua;/home/dupp/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?.lua;/home/dupp/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/dupp/.cache/nvim/packer_hererocks/2.1.1692716794/lib/lua/5.1/?.so"
+local package_path_str = "/home/dupp/.cache/nvim/packer_hererocks/2.1.1699392533/share/lua/5.1/?.lua;/home/dupp/.cache/nvim/packer_hererocks/2.1.1699392533/share/lua/5.1/?/init.lua;/home/dupp/.cache/nvim/packer_hererocks/2.1.1699392533/lib/luarocks/rocks-5.1/?.lua;/home/dupp/.cache/nvim/packer_hererocks/2.1.1699392533/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/dupp/.cache/nvim/packer_hererocks/2.1.1699392533/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -120,7 +120,7 @@ _G.packer_plugins = {
     url = "https://github.com/github/copilot.vim"
   },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\n�\3\0\0\6\0\14\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\0034\4\4\0005\5\t\0>\5\1\0045\5\n\0>\5\2\0045\5\v\0>\5\3\4=\4\f\3=\3\r\2B\0\2\1K\0\1\0\vconfig\rshortcut\1\0\5\tdesc\tquit\ngroup\vString\bkey\6q\ticon\t \vaction\6q\1\0\5\tdesc\nFiles\ngroup\rFunction\bkey\6f\ticon\t \vactionCTelescope find_files find_command=rg,--ignore,--hidden,--files\1\0\5\tdesc\vUpdate\ngroup\fInclude\bkey\6u\ticon\t \vaction\15PackerSync\fproject\1\0\1\venable\2\16week_header\1\0\1\17disable_move\2\1\0\1\venable\2\1\0\1\ntheme\nhyper\nsetup\14dashboard\frequire\0" },
+    config = { "\27LJ\2\n�\16\0\0\6\0\16\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\0035\4\t\0=\4\n\0034\4\4\0005\5\v\0>\5\1\0045\5\f\0>\5\2\0045\5\r\0>\5\3\4=\4\14\3=\3\15\2B\0\2\1K\0\1\0\vconfig\rshortcut\1\0\5\tdesc\tquit\bkey\6q\ticon\t \vaction\6q\ngroup\vString\1\0\5\tdesc\nFiles\bkey\6f\ticon\t \vactionCTelescope find_files find_command=rg,--ignore,--hidden,--files\ngroup\rFunction\1\0\5\tdesc\vUpdate\bkey\6u\ticon\t \vaction\15PackerSync\ngroup\fInclude\fproject\1\0\1\venable\2\16week_header\1\0\1\venable\1\vheader\1\0\1\17disable_move\2\1\19\0\0\6 \6 \6 `        ██                                                                             `        ██                                                                             d        ██                                                         ██                  `        ██                                                                             �\1  ████████  ██   ██  ████████  ████████      ████████  ██      ██  ██   ██████████████ �\1  ██    ██  ██   ██  ██    ██  ██    ██      ██    ██   ██    ██   ██   ██    ██    ██ �\1  ██    ██  ██   ██  ██    ██  ██    ██      ██    ██    ██  ██    ██   ██    ██    ██ �\1  ██    ██  ██   ██  ██    ██  ██    ██      ██    ██     ████     ██   ██    ██    ██ �\1  ████████  ███████  ████████  ████████  ██  ██    ██      ██      ██   ██    ██    ██ d                     ██        ██                                                      d                     ██        ██                                                      d                     ██        ██                                                      d                     ██        ██                                                      \6 \6 \1\0\1\ntheme\nhyper\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -138,7 +138,7 @@ _G.packer_plugins = {
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["indent-blankline.nvim"] = {
-    config = { "\27LJ\2\n�\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\fexclude\1\0\0\rbuftypes\1\2\0\0\vnofile\14filetypes\1\0\0\1\2\0\0\14dashboard\nsetup\bibl\frequire\0" },
+    config = { "\27LJ\2\n�\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\fexclude\1\0\0\rbuftypes\1\2\0\0\vnofile\14filetypes\1\0\0\1\2\0\0\14dashboard\nsetup\bibl\frequire\0" },
     loaded = true,
     path = "/home/dupp/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
@@ -154,7 +154,6 @@ _G.packer_plugins = {
     url = "https://github.com/kkharji/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
-    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\flualine\frequire\0" },
     loaded = true,
     path = "/home/dupp/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
@@ -290,14 +289,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\flualine\frequire\0", "config", "lualine.nvim")
-time([[Config for lualine.nvim]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+try_loadstring("\27LJ\2\n�\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\fexclude\1\0\0\rbuftypes\1\2\0\0\vnofile\14filetypes\1\0\0\1\2\0\0\14dashboard\nsetup\bibl\frequire\0", "config", "indent-blankline.nvim")
+time([[Config for indent-blankline.nvim]], false)
 -- Config for: nvim-colorizer.lua
 time([[Config for nvim-colorizer.lua]], true)
 try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
@@ -306,14 +305,6 @@ time([[Config for nvim-colorizer.lua]], false)
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\np\0\0\3\0\a\0\0146\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0B\0\1\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\flualine\frequire\0", "config", "lualine.nvim")
-time([[Config for lualine.nvim]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
-try_loadstring("\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\bibl\frequire\0", "config", "indent-blankline.nvim")
-time([[Config for indent-blankline.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
@@ -330,8 +321,8 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'dashboard-nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'copilot.lua'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'dashboard-nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 
