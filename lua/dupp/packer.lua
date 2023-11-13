@@ -195,6 +195,9 @@ use {
 -- Move lines
 use "fedepujol/move.nvim"
 
+-- Code folding
+use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+
 -- AI help 
 use("github/copilot.vim")
 use {
