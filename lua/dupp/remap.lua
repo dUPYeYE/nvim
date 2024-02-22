@@ -4,6 +4,12 @@ vim.g.mapleader = " "
 -- Save file the convenient way
 vim.keymap.set("n", "<C-s>", vim.cmd.w)
 
+vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
 -- Close vim
 local nvimtree = require "nvim-tree.api"
 local function quit_nvim()

@@ -193,8 +193,12 @@ use {
 }
 
 -- Move lines
-use "fedepujol/move.nvim"
-
+use {
+  "fedepujol/move.nvim",
+  config = function ()
+    require("move").setup({})
+  end
+}
 -- Code folding
 use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
