@@ -47,7 +47,7 @@ return require("packer").startup(function(use)
     "hrsh7th/cmp-nvim-lsp", -- Required
     "L3MON4D3/LuaSnip",     -- Required
     "rafamadriz/friendly-snippets",
-    "kkharji/lspsaga.nvim",
+    -- "kkharji/lspsaga.nvim",
   }
 }
 
@@ -204,20 +204,20 @@ use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
 -- AI help 
 use("github/copilot.vim")
-use {
-  "zbirenbaum/copilot.lua",
-  cmd = "Copilot",
-  event = "InsertEnter",
-  config = function()
-    require("copilot").setup({})
-  end,
-}
-use {
-  "zbirenbaum/copilot-cmp",
-  after = { "copilot.lua" },
-  config = function ()
-    require("copilot_cmp").setup()
-  end
-}
+-- use {
+--   "zbirenbaum/copilot.lua",
+--   cmd = "Copilot",
+--   event = "InsertEnter",
+--   config = function()
+--     require("copilot").setup({})
+--   end,
+-- }
+-- use {
+--   "zbirenbaum/copilot-cmp",
+--   after = { "copilot.lua" },
+--   config = function ()
+--     require("copilot_cmp").setup()
+--   end
+-- }
 
 end)

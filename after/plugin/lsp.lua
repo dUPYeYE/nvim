@@ -7,9 +7,9 @@ lsp.nvim_workspace()
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
-  ['<S-Tab>'] = cmp.mapping.select_prev_item(cmp_select),
-  ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
-  ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  ['<C-b>'] = cmp.mapping.select_prev_item(cmp_select),
+  ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+  ['<C-y>'] = cmp.mapping.confirm({ select = true }),
   ["<C-Space>"] = cmp.mapping.complete(),
 })
 
@@ -36,7 +36,7 @@ cmp.setup({
     },
     sources = {
       -- Copilot Source
-      { name = "copilot", group_index = 2 },
+      -- { name = "copilot", group_index = 2 },
       -- Other Sources
       { name = "nvim_lsp", group_index = 2 },
       { name = "path", group_index = 2 },

@@ -36,6 +36,10 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 -- file explorer
 vim.keymap.set("n", "<C-e>", vim.cmd.NeoTreeFocus, { desc = "nvim-tree: Close", noremap = true, silent = true, nowait = true })
 
+-- Copilot
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-Right>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
 -- buffer
 vim.keymap.set("n", "<Tab>", vim.cmd.BufferNext, { silent = true })
 vim.keymap.set("n", "<S-Tab>", vim.cmd.BufferPrevious, { silent = true })
