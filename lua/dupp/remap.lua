@@ -45,6 +45,8 @@ vim.keymap.set("n", "<Tab>", vim.cmd.BufferNext, { silent = true })
 vim.keymap.set("n", "<S-Tab>", vim.cmd.BufferPrevious, { silent = true })
 vim.keymap.set("n", "<leader>w", vim.cmd.BufferClose, { silent = true })
 
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+
 -- Open git
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Open git" });
 
