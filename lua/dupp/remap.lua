@@ -56,6 +56,7 @@ vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Open undo tre
 -- Telescope(fuzzy finder) binds
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = "Find files in directory" })
+vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = "Find files in directory" })
 vim.keymap.set('n', '<leader>gf', builtin.git_files, { desc = "Find git files" })
 vim.keymap.set('n', '<C-f>', builtin.live_grep, { desc = "Search in project" })
 vim.keymap.set("n", "<leader>ch", builtin.colorscheme, { desc = "Change colorscheme" })
