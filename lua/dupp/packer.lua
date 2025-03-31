@@ -19,6 +19,7 @@ return require("packer").startup(function(use)
   use "rose-pine/neovim"
   use "erikbackman/brightburn.vim"
   use "ellisonleao/gruvbox.nvim"
+  use "xiantang/darcula-dark.nvim"
 
   -- Better syntax highlighting
   use {
@@ -85,6 +86,13 @@ return require("packer").startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim" -- OPTIONAL: for git status
   use "tpope/vim-fugitive"
+  use({
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+  })
 
   -- Topbar for open buffers
   use "romgrk/barbar.nvim"
@@ -108,6 +116,14 @@ return require("packer").startup(function(use)
 
   -- Save and load sessions
   use "Shatur/neovim-session-manager"
+  --[[ use {
+    'rmagatti/auto-session',
+    config = function()
+      require("auto-session").setup {
+        suppressed_dirs = { "~/", "~/.dotfiles", "~/code", "/"},
+      }
+    end
+  } ]]
 
   -- Dashboard
   use {

@@ -68,4 +68,28 @@ cmp.setup({
     },
 })
 
+lspconfig.ts_ls.setup {
+  on_attach = function(client, bufnr)
+    local opts = { buffer = bufnr, remap = false }
+
+    vim.cmd [[
+      autocmd BufWritePre *.ts,*.tsx,*.js,*.jsx EslintFixAll
+    ]]
+
+    vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+  end,
+  capabilities = capabilities,
+}
+
+lspconfig.volar.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "vue" },
+  init_options = {
+    vue = {
+      hybridMode = false,
+    },
+  },
+})
+
 lsp.setup()

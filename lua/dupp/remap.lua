@@ -48,7 +48,8 @@ vim.keymap.set("n", "<leader>w", vim.cmd.BufferClose, { silent = true })
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 
 -- Open git
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Open git" });
+vim.keymap.set("n", "<leader>gg", vim.cmd.LazyGit, { desc = "Open LazyGit" });
+vim.keymap.set("n", "<leader>gs", vim.cmd.LazyGitFilter, { desc = "Open commit history" });
 
 -- Open undotree
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Open undo tree" })
