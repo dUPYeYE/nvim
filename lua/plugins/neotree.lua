@@ -59,8 +59,21 @@ return {
     open_files_do_not_replace_types = { "terminal", "Trouble", "trouble", "qf", "Outline" },
     filesystem = {
       bind_to_cwd = false,
-      follow_current_file = { enabled = true },
+      follow_current_file = true,
       use_libuv_file_watcher = true,
+      filtered_items = {
+        hide_dotfiles = false,
+        hide_gitignored = false,
+        hide_by_name = {
+          "node_modules",
+        },
+        never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
+          "node_modules",
+        },
+        never_show_by_pattern = { -- uses glob style patterns
+          ".null-ls_*",
+        },
+      },
     },
     window = {
       position = "current",
